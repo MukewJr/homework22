@@ -12,10 +12,29 @@ public class Main {
         System.out.print(array);
         System.out.println();
 
-        ArrayList<Integer> even = (ArrayList<Integer>) array.stream().filter(n -> n%2 == 0).collect(Collectors.toList());
-        System.out.print(even + " ");
+        ArrayList<Integer> even=new ArrayList<>();
+        for (int i = 0; i < array.size(); i++) {
+            if (array.get(i)%2==0){
+                even.add(array.get(i));
+            }
+        }
+        System.out.print(even);
         System.out.println();
-        ArrayList<Integer> odd = (ArrayList<Integer>) array.stream().filter(n -> n%2 != 0).collect(Collectors.toList());
-        System.out.print(odd+ " ");
+
+        ArrayList<Integer> odd=new ArrayList<>();
+        for (int i = 0; i < array.size(); i++) {
+            if (array.get(i)%2==1)
+            {
+                odd.add(array.get(i));
+            }
+        }
+        System.out.print(odd);
+
+        //OR
+//        ArrayList<Integer> even = (ArrayList<Integer>) array.stream().filter(n -> n%2 == 0).collect(Collectors.toList());
+//        System.out.print(even + " ");
+//        System.out.println();
+//        ArrayList<Integer> odd = (ArrayList<Integer>) array.stream().filter(n -> n%2 != 0).collect(Collectors.toList());
+//        System.out.print(odd+ " ");
     }
 }
